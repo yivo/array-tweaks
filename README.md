@@ -7,6 +7,8 @@
 * `drop_last`
 * `drop_last!`
 * `each_with_index_and_size`
+* `each_after`
+* `map_key`
 
 ## Installing gem
 Add to your Gemfile:

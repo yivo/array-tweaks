@@ -15,6 +15,16 @@ module ArrayTweaks
       size = self.size
       each_with_index { |item, index| yield(item, index, size) }
     end
+
+    def each_after(n)
+      each_with_index do |item, i|
+        yield(item) if i >= n
+      end
+    end
+
+    def map_key(key)
+      map { |item| item[key] }
+    end
   end
 end
 
