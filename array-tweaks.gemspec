@@ -15,5 +15,5 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files -z`.split("\x0")
   s.test_files    = `git ls-files -z -- {test,spec,features}/*`.split("\x0")
   s.require_paths = ["lib"]
-  s.add_development_dependency "bundler", "~> 1.7"
+  s.add_development_dependency "bundler", ">= 1.7.0", "< 3.0.0"
 end

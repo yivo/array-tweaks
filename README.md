@@ -10,6 +10,7 @@
 * `each_with_index_and_size`
 * `each_after`
 * `map_key`
+* `not_in?`
 
 ## Installing gem
 

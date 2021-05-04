@@ -29,3 +29,15 @@ module ArrayTweaks
 end
 
 Array.include ArrayTweaks::Extension
+
+module ObjectTweaks
+  module Extension
+    def not_in?(another_object)
+      !another_object.include?(self)
+    rescue NoMethodError
+      raise ArgumentError, "The parameter passed to #not_in? must respond to #include?."
+    end
+  end
+end
+
+Object.include ObjectTweaks::Extension

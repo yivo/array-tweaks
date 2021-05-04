@@ -47,4 +47,9 @@ class ArrayTweaksTest < Test::Unit::TestCase
   def test_map_key
     assert_equal ["a", "b", nil, "c"], [{ k: "a" }, { k: "b" }, {}, { k: "c" }].map_key(:k)
   end
+
+  def test_not_in
+    assert_true "d".not_in? ["a", "b", nil, "c"]
+    assert_false "b".not_in? ["a", "b", nil, "c"]
+  end
 end
